@@ -95,6 +95,98 @@ h6 {
 }
 
 body {
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-weight: 400;
+  color: #fff;
+  background-color: #000;
+}
+
+.container {
+  max-width: 1670px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 42px;
+}
+
+.logo__img {
+  height: 100%;
+  margin-right: 17px;
+}
+
+.logo__text {
+  font-size: 37px;
+  font-weight: 800;
+  line-height: 0.9;
+  color: #fff;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: #707070;
+}
+
+.nav__item {
+  margin-right: 38px;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__item:hover {
+  color: #326CF9;
+}
+
+.nav__item::after {
+  content: "";
+  display: none;
+  width: 11px;
+  height: 6px;
+  background-image: url("../img/icons/nav-arrow.svg");
+}
+
+.nav__item--hasSublist::after {
+  display: block;
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }

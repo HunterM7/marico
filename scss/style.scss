@@ -1,7 +1,111 @@
 @import "_normalize";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
+// === Vars ===
+
+$Primary: #326CF9;
+$Gray: #707070;
+$Lightgreen: #0FC65C;
+$White: #fff;
+$Black: #000;
+
+$TransPrimary: all 0.15s ease;
+
+
+// === Common ===
+
 body {
+	font-family: 'Poppins', sans-serif;
 	font-size: 20px;
 	font-weight: 400;
+	color: $White;
+
+	background-color: $Black;
+}
+
+.container {
+	max-width: 1670px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+// === Logo ===
+
+.logo {
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: flex-end;
+
+	height: 42px;
+
+	&__img {
+		height: 100%;
+
+		margin-right: 17px;
+	}
+
+	&__text {
+		font-size: 37px;
+		font-weight: 800;
+		line-height: 0.9;
+		color: $White;
+	}
+}
+
+
+// === Nav ===
+
+.nav {
+	display: flex;
+	justify-content: center;
+
+	font-size: 20px;
+	font-weight: 500;
+	color: $Gray;
+
+	&__item {
+		margin-right: 38px;
+
+		transition: $TransPrimary;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:hover {
+			color: $Primary;
+		}
+
+		&::after {
+			content: "";
+			display: none;
+			width: 11px;
+			height: 6px;
+			background-image: url('../img/icons/nav-arrow.svg');
+		}
+
+		&--hasSublist {
+
+			&::after {
+				display: block;
+			}
+		}
+
+	}
+
+	&__link {
+	}
+}
+
+// === Header ===
+
+.header {
+
+	&__inner {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
 }

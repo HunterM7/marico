@@ -9,6 +9,8 @@ $Lightgreen: #0FC65C;
 $White: #fff;
 $Black: #000;
 
+$Gradient: linear-gradient(90deg, #FE6783 0%, #FFBF84 100%);;
+
 $TransPrimary: all 0.15s ease;
 
 
@@ -27,6 +29,32 @@ body {
 	max-width: 1670px;
 	margin: 0 auto;
 	padding: 0 15px;
+}
+
+h1 {
+	font-size: 112px;
+	font-weight: 700;
+	line-height: 1.14;
+	color: $White;
+
+	text-align: center;
+}
+
+.primary-btn {
+	font-size: 20px;
+	font-weight: 500;
+	color: $White;
+
+	padding: 14px 22px;
+	border-radius: 8px;
+
+	background-color: $Primary;
+}
+
+.secondary-btn {
+	font-size: 20px;
+	font-weight: 500;
+	color: $Gray;
 }
 
 // === Logo ===
@@ -53,7 +81,6 @@ body {
 	}
 }
 
-
 // === Nav ===
 
 .nav {
@@ -67,6 +94,8 @@ body {
 	&__item {
 		margin-right: 38px;
 
+		position: relative;
+
 		transition: $TransPrimary;
 
 		&:last-child {
@@ -77,35 +106,79 @@ body {
 			color: $Primary;
 		}
 
+		&.active {
+			color: $Primary;
+		}
+	}
+
+	&__link {
+		display: block;
+
+		position: relative;
+
 		&::after {
 			content: "";
 			display: none;
-			width: 11px;
-			height: 6px;
+			width: 12px;
+			height: 12px;
+
+			position: absolute;
+			right: -19px;
+			top: 50%;
+			transform: translateY(-50%);
+
 			background-image: url('../img/icons/nav-arrow.svg');
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
 		}
 
-		&--hasSublist {
+		&--has-sublist {
 
 			&::after {
 				display: block;
 			}
 		}
-
-	}
-
-	&__link {
 	}
 }
 
 // === Header ===
 
 .header {
+	margin-top: 46px;
+	margin-bottom: 156px;
 
 	&__inner {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
+	}
+
+	&__authorize {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__login {
+		margin-right: 24px;
+	}
+
+	&__signup {}
+}
+
+// === Get start ===
+
+.get-start {
+
+	&__title {
+	}
+
+	&__title--gradient {
+		background: $Gradient;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 }

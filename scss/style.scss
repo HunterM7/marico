@@ -36,8 +36,13 @@ h1 {
 	font-weight: 700;
 	line-height: 1.14;
 	color: $White;
+}
 
-	text-align: center;
+h3 {
+	font-size: 40px;
+	font-weight: 500;
+	line-height: 1.5;
+	color: $White;
 }
 
 .primary-btn {
@@ -172,13 +177,20 @@ h1 {
 // === Get start ===
 
 .get-start {
+	text-align: center;
 
 	&__title {
+		margin-bottom: 140px;
 	}
 
 	&__title--gradient {
 		background: $Gradient;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
+	}
+
+	&__sub-title {
+		max-width: 700px;
+		margin: 0 auto;
 	}
 }

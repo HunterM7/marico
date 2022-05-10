@@ -113,7 +113,13 @@ h1 {
   font-weight: 700;
   line-height: 1.14;
   color: #fff;
-  text-align: center;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #fff;
 }
 
 .primary-btn {
@@ -257,9 +263,22 @@ h1 {
   margin-right: 24px;
 }
 
+.get-start {
+  text-align: center;
+}
+
+.get-start__title {
+  margin-bottom: 140px;
+}
+
 .get-start__title--gradient {
   background: -webkit-gradient(linear, left top, right top, from(#FE6783), to(#FFBF84));
   background: linear-gradient(90deg, #FE6783 0%, #FFBF84 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.get-start__sub-title {
+  max-width: 700px;
+  margin: 0 auto;
 }

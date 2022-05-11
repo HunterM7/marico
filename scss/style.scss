@@ -38,10 +38,24 @@ h1 {
 	color: $White;
 }
 
+h2 {
+	font-size: 75px;
+	font-weight: 600;
+	line-height: 1.49;
+	color: $White;
+}
+
 h3 {
 	font-size: 40px;
 	font-weight: 500;
 	line-height: 1.5;
+	color: $White;
+}
+
+h4 {
+	font-size: 35px;
+	font-weight: 600;
+	line-height: 1.49;
 	color: $White;
 }
 
@@ -264,6 +278,93 @@ h3 {
 
 			border: 6px solid rgba($Lightgreen, 0.5);
 			border-radius: 50%;
+		}
+	}
+}
+
+// === Advantages ===
+
+.advantages {
+	text-align: center;
+
+	padding-top: 68px;
+
+	&__container {
+		max-width: 1510px;
+	}
+
+	&__title {
+		margin-bottom: 64px;
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: start;
+	}
+
+	&__item {
+		max-width: 440px;
+
+		text-align: center;
+
+		h4 {
+			padding-left: 42px;
+			margin-bottom: 10px;
+
+			display: inline-block;
+
+			position: relative;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 32px;
+				height: 32px;
+
+				position: absolute;
+				top: 50%;
+				left: 0;
+
+				transform: translateY(-50%);
+
+				// background-image: url('../img/icons/emoji-1.svg');
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+		}
+
+		p {
+			font-size: 22px;
+			font-weight: 400;
+			line-height: 1.5;
+			color: $Gray;
+		}
+
+		&:nth-child(1) {
+			h4::before {
+				width: 37px;
+				height: 37px;
+
+				background-image: url('../img/icons/emoji-1.svg');
+			}
+		}
+
+		&:nth-child(2) {
+			h4::before {
+				background-image: url('../img/icons/emoji-2.svg');
+			}
+		}
+
+		&:nth-child(3) {
+			h4::before {
+				width: 43px;
+				height: 43px;
+
+				background-image: url('../img/icons/emoji-3.svg');
+			}
 		}
 	}
 }

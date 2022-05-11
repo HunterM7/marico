@@ -144,6 +144,13 @@ h4 {
   color: #fff;
 }
 
+h5 {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #fff;
+}
+
 .primary-btn {
   font-size: 20px;
   font-weight: 500;
@@ -444,6 +451,7 @@ h4 {
 
 .step-1 {
   text-align: center;
+  margin-bottom: 190px;
 }
 
 .step-1__container {
@@ -467,4 +475,90 @@ h4 {
 
 .step-1__btn {
   padding: 22px 38px;
+}
+
+.your-homepage__container {
+  max-width: 1584px;
+}
+
+.your-homepage__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+}
+
+.your-homepage__info-box {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.your-homepage__img {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.your-homepage__img img {
+  height: 100%;
+}
+
+.your-homepage__suptitle {
+  margin-bottom: 80px;
+}
+
+.your-homepage__title {
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.your-homepage__title span {
+  color: #326CF9;
+}
+
+.your-homepage__list {
+  list-style-type: none;
+  counter-reset: num;
+  margin-bottom: 66px;
+}
+
+.your-homepage__item {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 23px;
+}
+
+.your-homepage__item::before {
+  content: counter(num) "";
+  counter-increment: num;
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  line-height: 33px;
+  text-align: center;
+  margin-right: 12px;
+  border-radius: 50%;
+  background-color: #2D2D2D;
+}
+
+.your-homepage__button-1 {
+  padding: 22px 22px;
+  margin-right: 18px;
+}
+
+.your-homepage__button-2 {
+  padding: 22px 36px;
 }

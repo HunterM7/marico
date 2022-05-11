@@ -67,6 +67,13 @@ h4 {
 	color: $White;
 }
 
+h5 {
+	font-size: 30px;
+	font-weight: 500;
+	line-height: 1.5;
+	color: $White;
+}
+
 .primary-btn {
 	font-size: 20px;
 	font-weight: 500;
@@ -383,6 +390,8 @@ h4 {
 .step-1 {
 	text-align: center;
 
+	margin-bottom: 190px;
+
 	&__container {
 		max-width: 960px;
 	}
@@ -407,4 +416,93 @@ h4 {
 	&__btn {
 		padding: 22px 38px;
 	}
+}
+
+// === Your Homepage ===
+
+.your-homepage {
+
+	&__container {
+		max-width: 1584px;
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-basis: 0;
+	}
+
+	&__info-box {
+		flex-grow: 2;
+		flex-shrink: 0;
+		}
+	
+	&__img {
+		flex-grow: 1;
+		flex-shrink: 0;
+
+		img {
+			height: 100%;
+		}
+	}
+
+	&__suptitle {
+		margin-bottom: 80px;
+	}
+
+	&__title {
+		line-height: 1.5;
+
+		margin-bottom: 30px;
+
+		span {
+			color: $Primary;
+		}
+	}
+
+	&__list {
+		list-style-type: none;
+		counter-reset: num;
+
+		margin-bottom: 66px;
+	}
+
+	&__item {
+		display: block;
+		margin-bottom: 12px;
+
+		font-size: 23px;
+
+		&::before {
+			content: counter(num) '';
+			counter-increment: num;
+
+			display: inline-block;
+			width: 33px;
+			height: 33px;
+
+			line-height: 33px;
+			text-align: center;
+
+			margin-right: 12px;
+
+			border-radius: 50%;
+
+			background-color: #2D2D2D;
+		}
+	}
+
+	&__buttons {
+	}
+
+	&__button-1 {
+		padding: 22px 22px;
+		margin-right: 18px;
+	}
+
+	&__button-2 {
+		padding: 22px 36px;
+	}
+
 }

@@ -6,6 +6,7 @@
 $Primary: #326CF9;
 $Gray: #707070;
 $Lightgreen: #0FC65C;
+$Dark: #0D0D0D;
 $White: #fff;
 $Black: #000;
 
@@ -385,12 +386,16 @@ h5 {
 	}
 }
 
-// === Step 1 ===
+// === Step ===
 
-.step-1 {
+.step {
 	text-align: center;
 
 	margin-bottom: 190px;
+
+	&--2 {
+		margin-bottom: 170px;
+	}
 
 	&__container {
 		max-width: 960px;
@@ -403,6 +408,9 @@ h5 {
 	&__title {
 		line-height: 1.3;
 
+		&--2 {
+			margin-bottom: 10px;
+		}
 	}
 
 	&__desc {
@@ -411,6 +419,10 @@ h5 {
 		color: $Gray;
 
 		margin-bottom: 34px;
+
+		&--2 {
+			margin-bottom: 10px;
+		}
 	}
 
 	&__btn {
@@ -421,6 +433,7 @@ h5 {
 // === Your Homepage ===
 
 .your-homepage {
+	margin-bottom: 190px;
 
 	&__container {
 		max-width: 1584px;
@@ -434,13 +447,11 @@ h5 {
 	}
 
 	&__info-box {
-		flex-grow: 2;
-		flex-shrink: 0;
-		}
+		flex: 0 0 2;
+	}
 	
 	&__img {
-		flex-grow: 1;
-		flex-shrink: 0;
+		flex: 0 0 500px;
 
 		img {
 			height: 100%;
@@ -505,4 +516,76 @@ h5 {
 		padding: 22px 36px;
 	}
 
+}
+
+// === Plates ===
+
+.plates {
+
+	&__inner {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	
+	&__container {
+		max-width: 1760px;
+	}
+
+	&__item {
+		min-height: 666px;
+
+		padding: 33px 45px;
+
+		text-align: left;
+
+		background-color: $Dark;
+
+		&:first-child {
+			background-image: url('../img/img-2.png');
+			background-size: 788px auto;
+			background-repeat: no-repeat;
+			background-position: right bottom;
+		}
+
+		&--2 {
+			.plates__suptitle {
+				margin-bottom: 100px;
+			}
+
+			.plates__title {
+				font-weight: 700;
+			}
+		}
+
+		img {
+			width: 100%;
+
+			padding: 0 -45px -33px 0;
+		}
+
+		& + & {
+			margin-left: 23px;
+		}
+	}
+
+	&__suptitle {
+		font-size: 30px;
+		font-weight: 400;
+		line-height: 1.5;
+		color: $Lightgreen;
+
+		margin-bottom: 40px;
+	}
+
+	&__title {
+		line-height: 1.25;
+		letter-spacing: 3px;
+		color: $Gray;
+
+		margin-bottom: 28px;
+
+		span {
+			color: $White;
+		}
+	}
 }
